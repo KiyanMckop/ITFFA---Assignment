@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="ProfilePage.css">
+    <script type="module" src="./ProfilePage.js"></script>
+</head>
+<body>
+    <div class="main">
+
+        <!-- Food Form --> 
+        <div class="cell">
+            <h2>Food Intake:</h2>
+            <form id="foodIntakeForm">
+                <label for="category">Food Category:</label>
+                <select id="foodCategory" name="foodCategory" required>
+                    <option value="">Select</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Snack">Snack</option>
+                </select>
+                <br>
+                <label for="foodName">Food Name:</label>
+                <input type="text" id="foodName" name="foodName" required>
+                <br>
+                <label for="calories">Calories:</label>
+                <input type="number" id="foodCalories" name="foodCalories">
+                <br>
+                <label for="protein">Protein:</label>
+                <input type="number" id="foodProtein" name="foodProtein">
+                <br>
+                <label for="carbs">Carbs:</label>
+                <input type="number" id="foodCarbs" name="foodCarbs">
+                <br>
+                <label for="fats">Fats:</label>
+                <input type="number" id="foodFats" name="foodFats">
+                <button id="sumbitFoodIntake">Submit</button>
+            </form>
+        </div>
+
+        <!-- Workout Form --> 
+        <div class="cell">
+            <h2>Workout Information:</h2>
+            <form id="workoutForm">
+              <label for="muscleGroup">Muscle Group:</label>
+              <select id="muscleGroup" name="muscleGroup" required>
+                <option value="">Select</option>
+                <option value="chest">Chest</option>
+                <option value="back">Back</option>
+                <option value="legs">Legs</option>
+                <option value="shoulders">Shoulders</option>
+                <option value="abdominals">Abdominals</option>
+              </select>
+              <br>
+              <label for="exercise">Exercise Name:</label>
+              <input type="text" id="exercise" name="exercise" required>
+              <br>
+              <label for="sets">Sets:</label>
+              <input type="number" id="sets" name="sets">
+              <br>
+              <label for="reps">Reps:</label>
+              <input type="number" id="reps" name="reps">
+              <br>
+              <label for="workoutWeight">Weight:</label>
+              <input type="number" id="weight" name="workoutWeight">
+              <br>
+              <button type="button" id="submitWorkout">Submit</button>
+            </form>
+        </div>       
+    </div>
+</body>
+</html>

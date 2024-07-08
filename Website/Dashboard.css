@@ -1,0 +1,95 @@
+/* Common styles for body, html, and container */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #222831, #393E46);
+    font-family: Arial, sans-serif;
+    overflow-y: hidden;
+}
+
+.container {
+    display: grid;
+    grid: 
+        'sidebar graph graph'
+        'sidebar graph graph'
+        'sidebar graph graph';
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    grid-area: sidebar;
+    padding: 2rem;
+    height: 100%;
+
+}
+
+.sidebar a{
+    list-style-type: none;
+    color: #eee;
+    padding: 10px;
+
+    display: grid;
+
+}
+
+body{
+    height: 100vh;
+}
+
+/* Main area styles */
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-area: graph;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.cell {
+    border: 1px solid black;
+    display: grid;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+canvas{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#chart3{
+    grid-column: 2;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-area: graph;
+        height: 100%;
+    }
+    
+    .container {
+        grid: 
+            'sidebar'
+            'graph'
+            'graph';
+        height: 100vh;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        height: 20%;
+    }
+
+    .sidebar a{
+        font-size: small;
+    }
+}

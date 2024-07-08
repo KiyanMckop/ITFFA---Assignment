@@ -1,0 +1,104 @@
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #222831, #393E46);
+    font-family: Arial, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid: 
+        'sidebar main'
+        'sidebar main'
+        'sidebar main';
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    grid-area: sidebar;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.sidebar a{
+    list-style-type: none;
+    color: #eee;
+    padding: 10px;
+
+    display: grid;
+
+}
+
+.main{
+    grid-area: main;
+    height: 100%;
+
+    display: grid;
+}
+    
+#workoutInfoContainer{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#foodInfoContainer{
+    border: 1px solid black;
+    padding: 10px;
+
+}
+
+#bodyInfoContainer{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#workoutInfoContainer .row{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.row{
+    display:grid;
+    align-items: center;
+    padding-left: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.categoryLable{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    body{
+        grid: 
+            'sidebar'
+            'main'
+            'main';
+    }
+    .main{
+        grid-area: main;
+        display: grid;
+    }
+
+    .main h3, p{
+        font-size: small;
+    }
+    
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        height: 20%;
+    }
+
+    .sidebar a{
+        font-size: small;
+    }
+
+}
